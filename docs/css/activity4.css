@@ -1,0 +1,186 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8d7e6; /* Light pink background */
+    color: #cb1e5d; /* Pink text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Unordered List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* List Item Styles */
+li {
+    background-color: #ffe4e1; /* Light pink background for list items */
+    margin: 5px 0; /* Space between list items */
+    padding: 10px; /* Padding inside list items */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #ff66b2;
+}
+
+/* Navigation Links */
+nav a {
+    margin: 0 10px;
+    color: #ff66b2;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Layout */
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Image Section */
+.image-section {
+    width: 30%;
+}
+
+.image-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Description Styles */
+.description {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.description h1 {
+    font-size: 2em;
+    color: #e62384; /* Set the text color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Text shadow */
+    margin-bottom: 15px;
+}
+
+/* Achievement Box */
+.ach {
+    background-color: #ff66b2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Section Headings */
+h3 {
+    background-color: #f084ac;
+    color: rgb(250, 3, 98);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Dark Mode for Headings */
+body.dark-mode h1,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #ffffff;
+}
+
+/* Dark Mode for Achievements */
+body.dark-mode .ach ul {
+    background-color: #2d2d2d;
+    color: #ffffff;
+}
+
+/* Dark Mode Toggle Button Styles */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;  /* Move it to the bottom */
+    right: 20px;   /* Keep it on the right */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: background-color 0.4s ease;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: transform 0.4s ease;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3; /* Blue when toggled */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Dark Mode Toggle Label */
+.mode-label {
+    font-size: 16px;
+    color: #333;
+}
+
+body.dark-mode .mode-label {
+    color: #fff;
+}
+
+/* Smooth Transition for All Elements */
+body, h1, h3, h4, .ach ul {
+    transition: all 0.3s ease;
+}
